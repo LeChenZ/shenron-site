@@ -16,6 +16,7 @@ const commandsData = {
       { name: "/quantum-coin", description: "Lance une pièce quantique : Pile, Face, ou Superposition !", permission: "All" },
       { name: "/quote", description: "Envoie une citation inspirante aléatoire.", permission: "All" },
       { name: "/random-sound", description: "Envoie un son drôle ou absurde aléatoire.", permission: "All" },
+      { name: "/random-soundoard", description: "Joue un son aléatoire dans le salon vocal, comme une soundboard.", permission: "All" },
       { name: "/roll", description: "Lance un ou plusieurs dés et affiche le résultat.", permission: "All" },
       { name: "/say", description: "Faire dire au bot un message.", permission: "All" },
       { name: "/timecapsule", description: "Envoie un message différé que tu recevras plus tard.", permission: "All" },
@@ -50,7 +51,6 @@ const commandsData = {
     commands: [
       { name: "/addrole", description: "Ajoute un rôle à un membre", permission: "Mod" },
       { name: "/ban", description: "Bannir un membre du serveur.", permission: "Mod" },
-      { name: "/blacklist", description: "Gérer la blacklist globale (owner bot uniquement)", permission: "Owner" },
       { name: "/clear", description: "Supprime un nombre de messages dans le channel", permission: "Mod" },
       { name: "/kick", description: "Exclut un membre du serveur", permission: "Mod" },
       { name: "/lock", description: "Verrouille le salon en empêchant les membres d'envoyer des messages.", permission: "Mod" },
@@ -81,7 +81,8 @@ const commandsData = {
     icon: "🧰",
     title: "Commandes - Utils",
     commands: [
-      { name: "/botinfo", description: "Affiche des informations détaillées sur le bot", permission: "All" },
+      { name: "/autorole", description: "Configure l’attribution automatique d’un rôle aux nouveaux membres.", permission: "Admin" },
+      { name: "/botinfo", description: "Affiche des informations détaillées sur le bot.", permission: "All" },
       { name: "/color", description: "Affiche une couleur à partir d’un code hex ou nom.", permission: "All" },
       { name: "/crypto", description: "Affiche le cours actuel d'une cryptomonnaie ou le top des cryptos.", permission: "All" },
       { name: "/gradient", description: "Génère un dégradé entre deux couleurs avec options avancées.", permission: "All" },
@@ -92,6 +93,24 @@ const commandsData = {
       { name: "/translate", description: "Traduit un texte d’une langue source vers une langue cible.", permission: "All" },
       { name: "/userinfo", description: "Affiche des informations sur un utilisateur", permission: "All" },
       { name: "/weather", description: "Affiche la météo d'une ville donnée.", permission: "All" },
+      { name: "/welcome", description: "Configurer le système de bienvenue.", permission: "Admin" },
+    ],
+  },
+
+  categoryOwner: {
+    icon: "👑",
+    title: "Commandes - Owner",
+    commands: [
+      { name: "/blacklist", description: "Gérer la blacklist globale (owner bot uniquement)", permission: "Owner" },
+      { name: "/server", description: "Affiche la liste des serveurs où le bot est présent (owner bot uniquement)", permission: "Owner" },
+    ],
+  },
+
+  categoryTicket: {
+    icon: "🎟️",
+    title: "Commandes - Ticket",
+    commands: [
+      { name: "/ticket", description: "Commandes liées aux tickets", permission: "All" },
     ],
   },
 };
